@@ -1,3 +1,12 @@
+# ---------------------------------------------------------------------------- #
+# This script examplifies how to run parallel processes in R and compares      #
+# parallel to serial performance in a simple counting scenario                 #
+# Author Leon Eyrich Jessen March 2017                                         #
+# https://github.com/leonjessen/ParallelR/blob/master/parallelr.R              #
+# ---------------------------------------------------------------------------- #
+
+
+
 # Clear workspace
 # ------------------------------------------------------------------------------
 rm(list=ls())
@@ -65,3 +74,4 @@ d %>% ggplot(aes(x=count_to,y=secs,colour=proc_type)) +
   scale_colour_npg() +
   labs(x = paste0("count to 'x' ",r," times")) +
   theme_bw()
+ggsave('parallelr_results.png')
